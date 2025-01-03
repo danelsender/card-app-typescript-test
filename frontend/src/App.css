@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer components {
-   .entryBox {
-      @apply flex justify-center flex-col w-fit m-auto mt-10 gap-5 bg-gray-300 dark:bg-slate-800 p-8 rounded-lg;
-   }
+  .entryBox {
+    @apply flex justify-center flex-col w-fit m-auto mt-10 gap-5 bg-gray-300 dark:bg-slate-800 p-8 rounded-lg;
+  }
 }
 
 @layer components {
-   .inputText {
-      @apply p-3 rounded-md dark:text-black
-   }
+  .inputText {
+    @apply p-3 rounded-md dark:text-black;
+  }
 }

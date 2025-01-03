@@ -1,10 +1,20 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
-export default function NavBar(){
-    return(
-      <nav className="flex justify-center gap-5">
-        <NavLink className="m-3 p-4 text-xl bg-blue-400 dark:bg-green-800 hover:bg-blue-500 dark:hover:bg-green-600 rounded-md font-medium text-white" to={'/'}>All Entries</NavLink>
-        <NavLink className="m-3 p-4 text-xl bg-blue-400 dark:bg-green-800 hover:bg-blue-500 dark:hover:bg-green-600 rounded-md font-medium text-white" to={'/create'}>New Entry</NavLink>
-      </nav>
-    )
+export default function NavBar() {
+  return (
+    <nav className="flex justify-center gap-5">
+      <NavLink
+        className="m-3 p-4 text-xl bg-blue-400 dark:bg-green-800 hover:bg-blue-500 dark:hover:bg-green-600 rounded-md font-medium text-white"
+        to={"/"}
+      >
+        All Entries
+      </NavLink>
+      <NavLink
+        className="m-3 p-4 text-xl bg-blue-400 dark:bg-green-800 hover:bg-blue-500 dark:hover:bg-green-600 rounded-md font-medium text-white"
+        to={"/create"}
+      >
+        New Entry
+      </NavLink>
+    </nav>
+  );
 }
