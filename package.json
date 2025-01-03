@@ -14,5 +14,9 @@
   },
   "lint-staged": {
     "**/*": "prettier --ignore-path .prettierignore --ignore-unknown --write"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "fastify": "^5.2.0"
   }
 }

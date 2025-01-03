@@ -15,18 +15,19 @@ export default function AllEntries(){
         )
     }
     return(
-        <section className="grid grid-cols-2 md:grid-cols-4">
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {entries.map((entry: Entry, index: number) => {
                 return(
-                    <div id={entry.id} key={index}className="bg-gray-300 shadow-md shadow-gray-500 m-3 p-4 rounded flex flex-col justify-between">
-                        <h1 className="font-bold text-sm md:text-lg">{entry.title}</h1>
-                        <p className="text-center text-lg font-light md:mt-2 md:mb-4 mt-1 mb-3">{entry.description}</p>
-                        <section className="flex items-center justify-between flex-col md:flex-row pt-2 md:pt-0">
-                        <div className="flex justify-center">
-                            <button onClick={()=> {deleteEntry(entry.id as string)}} className="m-1 md:m-2 p-1 font-semibold rounded-md bg-red-500 hover:bg-red-700">✖</button>
-                            <button onClick={()=> {navigate(`/edit/${entry.id}`, { replace: true });}} className="m-1 md:m-2 p-1 font-semibold rounded-md bg-blue-500 hover:bg-blue-700">🖊</button>
-                        </div>
-                        <time className="text-right text-sm md:text-lg">{new Date(entry.created_at.toString()).toLocaleDateString()}</time>
+                    <div id={entry.id} key={index} className="bg-gray-300 dark:bg-gray-600 shadow-md shadow-gray-500 m-3 p-4 rounded justify-between flex flex-col">
+                        <h1 className="font-bold text-center text-sm break-words">{entry.title}</h1>
+                        <p className="text-center text-lg font-light mt-1 mb-3 break-words">{entry.description}</p>
+                        <section className="flex items-center justify-between flex-col pt-2">
+                           <time className="flex text-left text-sm "> Created: {new Date(entry.created_at.toString()).toLocaleDateString()} </time>
+                           <time className="flex text-left text-sm "> Scheduled: {new Date(entry.scheduled_for.toString()).toLocaleDateString()} </time>
+                           <div className="flex justify-center">
+                              <button onClick={()=> {deleteEntry(entry.id as string)}} className="m-1 p-1 font-semibold rounded-md bg-red-500 hover:bg-red-700">Delete</button>
+                              <button onClick={()=> {navigate(`/edit/${entry.id}`, { replace: true });}} className="m-1 p-1 font-semibold rounded-md bg-blue-500 hover:bg-blue-700">Edit</button>
+                           </div>
                         </section>
                         
                     </div>
