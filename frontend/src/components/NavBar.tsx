@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+import SettingsIcon from "@mui/icons-material/Settings";
 import { Switch } from "@mui/material";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -9,7 +10,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import React, { useState } from "react";
-import SettingsIcon from '@mui/icons-material/Settings';
 
 import { TransitionProps } from "@mui/material/transitions";
 
@@ -21,22 +21,22 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function NavBar() {
-//   const [toggleDarkMode, setToggleDarkMode] = useState(false);
+  //   const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
-//   const toggleDarkTheme = () => {
-//     document.documentElement.classList.toggle("dark");
-//     setToggleDarkMode(!toggleDarkMode);
-//   };
+  //   const toggleDarkTheme = () => {
+  //     document.documentElement.classList.toggle("dark");
+  //     setToggleDarkMode(!toggleDarkMode);
+  //   };
 
-//   const [open, setOpen] = React.useState(false);
+  //   const [open, setOpen] = React.useState(false);
 
-//   const handleClickOpen = () => {
-//     setOpen(true);
-//   };
+  //   const handleClickOpen = () => {
+  //     setOpen(true);
+  //   };
 
-//   const handleClose = () => {
-//     setOpen(false);
-//   };
+  //   const handleClose = () => {
+  //     setOpen(false);
+  //   };
   return (
     <nav className="flex justify-between items-center p-4">
       <div className="navbar-left">
@@ -62,45 +62,45 @@ export default function NavBar() {
 }
 
 export function Settings() {
-   const [toggleDarkMode, setToggleDarkMode] = useState(false);
+  const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
-   const toggleDarkTheme = () => {
-      document.documentElement.classList.toggle("dark");
-      setToggleDarkMode(!toggleDarkMode);
-   };
+  const toggleDarkTheme = () => {
+    document.documentElement.classList.toggle("dark");
+    setToggleDarkMode(!toggleDarkMode);
+  };
 
-   const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-   const handleClickOpen = () => {
-      setOpen(true);
-   };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-   const handleClose = () => {
-      setOpen(false);
-   };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-   return (
-      <div>
-         <Button className="m-3 p-4" onClick={handleClickOpen}>
-            <SettingsIcon />
-         </Button>
-         <Dialog
-            open={open}
-            TransitionComponent={Transition}
-            keepMounted
-            onClose={handleClose}
-            aria-describedby="alert-dialog-slide-description"
-         >
-            <DialogTitle>{"Settings"}</DialogTitle>
-            <DialogContent>
-               <DialogContentText id="alert-dialog-slide-description">
-                  Dark Mode <Switch onChange={toggleDarkTheme} />
-               </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-               <Button onClick={handleClose}>Close</Button>
-            </DialogActions>
-         </Dialog>
-      </div>
-   );
+  return (
+    <div>
+      <Button className="m-3 p-4" onClick={handleClickOpen}>
+        <SettingsIcon />
+      </Button>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Settings"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+            Dark Mode <Switch onChange={toggleDarkTheme} />
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
 }
