@@ -101,7 +101,7 @@ For the switch and the dark mode toggle I am using the [Material UI ](https://mu
 required install
 
 ```bash
-npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material @mui/material @emotion/react @emotion/styled
 ```
 
 the switch itself requires
@@ -112,7 +112,7 @@ npm install react-switch
 
 the guide I am following can be found [here](https://semaphoreci.com/blog/dark-mode-reactjs-material-ui#:~:text=To%20toggle%20between%20the%20light,it%20in%20the%20App%20component.).
 
-# adding the switch
+## adding the switch
 
 Making use of the `tailwind` `darkMode` option in `tailwind.config.js` as a `selector` (this replaced the `class` option recently). Now `className` options can be differentiated between `light` and `dark`.
 
@@ -121,6 +121,10 @@ I _was_ using he MUI to handle the dark mode with `ThemeProvider` and `CSSBaseLi
 So far the switch exists only as a switch. Must be in a `settings dialog`. I want to put this in the nav bar, left hand side.
 
 Dialog is now created and sat at the top of the page. BUT dark mode does not take effect to the dialog box...
+
+This is a because, I think, that the dialog box is not a child of the document so the dark mode setting isn't applied to it
+
+Settings button now has the cog icon rather than text
 
 # adding field to database
 
