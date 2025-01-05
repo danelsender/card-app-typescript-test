@@ -29,7 +29,6 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function App() {
-
   return (
     <div className="text-black dark:text-white dark:bg-black" style={{ display: "flex", flexDirection: "column" }}>
       <section>
