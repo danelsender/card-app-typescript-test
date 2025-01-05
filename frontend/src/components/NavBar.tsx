@@ -21,22 +21,6 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function NavBar() {
-  //   const [toggleDarkMode, setToggleDarkMode] = useState(false);
-
-  //   const toggleDarkTheme = () => {
-  //     document.documentElement.classList.toggle("dark");
-  //     setToggleDarkMode(!toggleDarkMode);
-  //   };
-
-  //   const [open, setOpen] = React.useState(false);
-
-  //   const handleClickOpen = () => {
-  //     setOpen(true);
-  //   };
-
-  //   const handleClose = () => {
-  //     setOpen(false);
-  //   };
   return (
     <nav className="flex justify-between items-center p-4">
       <div className="navbar-left">

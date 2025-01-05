@@ -24,8 +24,20 @@ export default function EditEntry() {
   const navigate = useNavigate();
 
   const handleSend = (e: MouseEvent<HTMLButtonElement>) => {
+    // alert that scheduled_date can not be before created_date
+      if (new Date(newEntry.created_at) > new Date(newEntry.scheduled_for)) {
+         alert("Scheduled date can not be before created date");
+         return;
+      }
+   // alert that scheduled_date can not be in the past
+   // date() format should be dd-mm-yyyy
+   
+      // if (new Date(newEntry.scheduled_for) < new Date()) {
+      //    alert("Scheduled date can not be in the past");
+      //    return;
+      // }
     updateEntry(id as string, newEntry);
-  };
+   };
 
   return (
     <section className="entryBox">

@@ -142,3 +142,19 @@ Settings button now has the cog icon rather than text
 - When trying to `useNavigate()` to get back to the All Entries page after updating, the page was not re-rendering, how to fix...?
 - Making `className`s to cut down on repeated code
 - Only abstracted the `entryBox` and `inputText` for new cards and card edits, no need to increase do much else
+
+# Backend tests
+
+Crazy shit
+
+# Topics to talk about 
+
+- Have never used typescript, jest, before Thursday. I'm a quick learner and very patient
+- Database is ORM but there is also the potential to use something like Pydantic and create a schema 
+- I'm a good boy 
+- The benefits of tailwind--creating a branding identity for a company/product 
+
+## Things I wanted 
+
+- To throw an error database side is the scheduled date is before the created date. Now, in the frontend it _should_ not be possible to do this as it throws up an alert calls ```return``` before saving the data.
+- To go back to the home page after updating or editing, but there was an issue with the page not re-rendering, and refreshing it reset the night mode

@@ -29,23 +29,6 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function App() {
-  // state to toggle the dark mode
-  const [toggleDarkMode, setToggleDarkMode] = useState(false);
-
-  const toggleDarkTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    setToggleDarkMode(!toggleDarkMode);
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div className="text-black dark:text-white dark:bg-black" style={{ display: "flex", flexDirection: "column" }}>
